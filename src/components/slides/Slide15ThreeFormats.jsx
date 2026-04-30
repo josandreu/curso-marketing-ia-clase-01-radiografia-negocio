@@ -40,7 +40,7 @@ const Slide15ThreeFormats = ({ total }) => {
   return (
     <SlideShell className="flex flex-col justify-center px-8 md:px-16 overflow-hidden">
       <div className="max-w-6xl mx-auto w-full relative z-10 font-body">
-        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-1 text-center">Output — Propuesta de valor</p>
+        <p className="font-body text-base tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-1 text-center">Output — Propuesta de valor</p>
         
         <h2 className="font-heading text-4xl md:text-5xl font-800 mb-12 text-center fade-up fade-up-2">
            TU PROPUESTA EN <span className="text-primary truncate uppercase">3 FORMATOS.</span>
@@ -56,15 +56,15 @@ const Slide15ThreeFormats = ({ total }) => {
                 </div>
                 
                 <div>
-                   <h3 className={`font-heading text-base md:text-lg font-900 uppercase tracking-widest ${f.color} mb-1`}>{f.name}</h3>
-                   <span className="font-mono text-[9px] text-muted-foreground/60 tracking-[2px] uppercase font-bold">{f.spec}</span>
+                   <h3 className={`font-heading text-lg md:text-xl font-900 uppercase tracking-widest ${f.color} mb-2`}>{f.name}</h3>
+                   <span className="font-mono text-xs text-muted-foreground/60 tracking-[2px] uppercase font-bold">{f.spec}</span>
                 </div>
 
-                <p className="text-sm text-foreground/80 leading-relaxed font-medium flex-1">
+                <p className="text-base text-foreground/80 leading-relaxed font-medium flex-1">
                   {f.desc}
                 </p>
 
-                <div className={`pt-5 border-t border-border/50 text-xs font-bold italic leading-tight ${f.color} opacity-80`}>
+                <div className={`pt-6 border-t border-border/50 text-sm font-bold italic leading-tight ${f.color} opacity-80`}>
                   {f.key}
                 </div>
               </BentoCard>

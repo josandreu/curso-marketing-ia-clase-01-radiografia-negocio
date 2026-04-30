@@ -9,7 +9,7 @@ const Slide01Cover = ({ total }) => {
         <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
 
-        <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-8 fade-up fade-up-1">
+        <p className="font-body text-base tracking-[0.3em] uppercase text-muted-foreground mb-8 fade-up fade-up-1">
           Módulo 1 — Estrategia, Marca y Storytelling
         </p>
 
@@ -34,22 +34,22 @@ const Slide01Cover = ({ total }) => {
 
         <div className="flex gap-10 mt-12 fade-up fade-up-6 flex-wrap justify-center font-body">
           <div className="flex flex-col items-center">
-            <span className="text-[10px] tracking-[2px] text-primary uppercase font-bold mb-1">Duración</span>
-            <span className="text-sm font-medium text-foreground">2h 35 min</span>
+            <span className="text-xs tracking-[2px] text-primary uppercase font-bold mb-1">Duración</span>
+            <span className="text-lg font-medium text-foreground">2h 35 min</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-[10px] tracking-[2px] text-primary uppercase font-bold mb-1">Formato</span>
-            <span className="text-sm font-medium text-foreground">Online en directo</span>
+            <span className="text-xs tracking-[2px] text-primary uppercase font-bold mb-1">Formato</span>
+            <span className="text-lg font-medium text-foreground">Online en directo</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-[10px] tracking-[2px] text-primary uppercase font-bold mb-1">Sesión</span>
-            <span className="text-sm font-medium text-foreground">1 de 8</span>
+            <span className="text-xs tracking-[2px] text-primary uppercase font-bold mb-1">Sesión</span>
+            <span className="text-lg font-medium text-foreground">1 de 8</span>
           </div>
         </div>
 
         <div className="mt-10 bg-primary/5 border border-primary/10 rounded-2xl px-8 py-4 fade-up fade-up-6">
-           <p className="text-sm text-foreground font-medium">
-            🎯 <span className="text-primary">Entregable:</span> Brief del proyecto real (1 pág, 8 secciones) + propuesta de valor en 3 formatos.
+           <p className="text-lg text-foreground font-medium leading-relaxed">
+            <span className="text-primary font-bold">Entregable:</span> Brief del proyecto real (1 pág, 8 secciones) + propuesta de valor en 3 formatos.
            </p>
         </div>
       </div>

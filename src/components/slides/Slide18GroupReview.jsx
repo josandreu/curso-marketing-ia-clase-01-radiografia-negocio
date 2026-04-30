@@ -20,29 +20,29 @@ const Slide18GroupReview = ({ total }) => {
           <span className="text-muted-foreground/30 font-300 text-[0.65em] uppercase tracking-tighter italic">El grupo evalúa en el chat.</span>
         </h2>
 
-        <div className="flex items-center gap-3 mb-10 py-2 px-5 bg-muted rounded-full fade-up fade-up-3">
-           <MessageCircle className="w-4 h-4 text-primary" />
-           <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Chat activo</span>
+        <div className="flex items-center gap-4 mb-12 py-3 px-8 bg-muted rounded-full fade-up fade-up-3">
+           <MessageCircle className="w-5 h-5 text-primary" />
+           <span className="text-sm font-bold text-muted-foreground uppercase tracking-widest">Chat activo</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-10 fade-up fade-up-4">
           {criteria.map((item, i) => (
-            <BentoCard key={i} className="flex flex-col items-center gap-4 py-12 px-8 hover:shadow-xl transition-all border border-border/40">
-              <div className={`font-heading text-7xl font-900 leading-none opacity-20 ${item.color} mb-2 tracking-tighter`}>
+            <BentoCard key={i} className="flex flex-col items-center gap-6 py-16 px-10 hover:shadow-xl transition-all border border-border/40">
+              <div className={`font-heading text-8xl font-900 leading-none opacity-20 ${item.color} mb-3 tracking-tighter`}>
                  {item.n}
               </div>
-              <h3 className="font-heading text-sm font-900 uppercase tracking-widest text-foreground leading-tight">
+              <h3 className="font-heading text-base font-900 uppercase tracking-widest text-foreground leading-tight">
                  {item.title}
               </h3>
-              <p className="text-[13px] text-muted-foreground leading-relaxed font-medium">
+              <p className="text-lg text-muted-foreground leading-relaxed font-medium">
                  {item.sub}
               </p>
             </BentoCard>
           ))}
         </div>
 
-        <div className="fade-up fade-up-5 max-w-2xl">
-           <p className="text-sm font-bold text-muted-foreground leading-relaxed italic border-t border-border/60 pt-8">
+        <div className="fade-up fade-up-5 max-w-3xl mx-auto">
+           <p className="text-lg font-bold text-muted-foreground leading-relaxed italic border-t border-border/60 pt-10">
               "Esta frase sobra" · "Este verbo es más potente" · "El diferencial está al final — súbelo al principio."
            </p>
         </div>

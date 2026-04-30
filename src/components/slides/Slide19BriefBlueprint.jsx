@@ -17,40 +17,40 @@ const Slide19BriefBlueprint = ({ total }) => {
   return (
     <SlideShell className="flex flex-col justify-center px-8 md:px-16 overflow-hidden">
       <div className="max-w-6xl mx-auto w-full relative z-10 font-body">
-        <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-1">Sprint final</p>
+        <p className="font-body text-base tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-1">Sprint final</p>
         
         <h2 className="font-heading text-3xl md:text-5xl font-800 mb-2 leading-tight fade-up fade-up-2">
           TU BRIEF ESTRATÉGICO.
         </h2>
-        <p className="text-xl font-bold text-primary italic mb-10 fade-up fade-up-2 tracking-tight">
+        <p className="text-2xl font-bold text-primary italic mb-12 fade-up fade-up-2 tracking-tight">
            (Ensamblado en 1 página.)
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 fade-up fade-up-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 fade-up fade-up-3">
           {items.map((item, i) => (
             <BentoCard 
               key={i} 
               accent={item.highlight}
-              className={`p-5 flex flex-col gap-2 border shadow-sm transition-transform hover:scale-[1.02] cursor-default
+              className={`p-6 flex flex-col gap-3 border shadow-sm transition-transform hover:scale-[1.02] cursor-default
               ${item.highlight ? 'border-primary/40 ring-4 ring-primary/5' : 'border-border/60'}`}
             >
-              <div className="flex items-center justify-between border-b border-border/40 pb-2 mb-1">
-                 <span className="font-mono text-[9px] text-muted-foreground/40 font-bold uppercase tracking-widest">{item.n}</span>
-                 {item.highlight && <div className="w-1.5 h-1.5 rounded-full bg-primary" />}
+              <div className="flex items-center justify-between border-b border-border/40 pb-3 mb-1">
+                 <span className="font-mono text-xs text-muted-foreground/40 font-bold uppercase tracking-widest">{item.n}</span>
+                 {item.highlight && <div className="w-2 h-2 rounded-full bg-primary" />}
               </div>
-              <h3 className={`font-heading text-[12px] font-900 uppercase tracking-widest leading-none ${item.highlight ? 'text-primary' : 'text-foreground/70'}`}>
+              <h3 className={`font-heading text-sm font-900 uppercase tracking-widest leading-none ${item.highlight ? 'text-primary' : 'text-foreground/70'}`}>
                 {item.name}
               </h3>
-              <p className="text-[11px] text-muted-foreground leading-relaxed font-medium">
+              <p className="text-xs text-muted-foreground leading-relaxed font-medium">
                 {item.desc}
               </p>
             </BentoCard>
           ))}
         </div>
 
-        <div className="mt-10 fade-up fade-up-4">
-           <BentoCard accent className="bg-primary/5 border-2 border-primary/10 text-center py-4 px-6">
-              <p className="text-sm font-bold text-primary italic tracking-tight">
+        <div className="mt-12 fade-up fade-up-4">
+           <BentoCard accent className="bg-primary/5 border-2 border-primary/10 text-center py-6 px-10">
+              <p className="text-lg font-bold text-primary italic tracking-tight leading-relaxed">
                  "Este brief es el INPUT de todas las sesiones siguientes. Sin él, cada IA produce resultados genéricos."
               </p>
            </BentoCard>

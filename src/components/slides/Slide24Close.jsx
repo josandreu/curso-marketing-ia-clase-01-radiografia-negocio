@@ -20,8 +20,8 @@ const Slide24Close = () => {
         </h2>
 
         <div className="mt-20 fade-up fade-up-4 flex flex-col items-center">
-          <div className="h-px w-12 bg-primary/20 mb-6" />
-          <p className="font-mono text-[10px] tracking-[4px] text-muted-foreground uppercase font-bold">
+          <div className="h-px w-12 bg-primary/20 mb-8" />
+          <p className="font-mono text-sm tracking-[4px] text-muted-foreground uppercase font-bold">
             Marketing Inteligente con IA &nbsp;·&nbsp; Sesión 1 de 8 &nbsp;·&nbsp; Módulo 1
           </p>
         </div>

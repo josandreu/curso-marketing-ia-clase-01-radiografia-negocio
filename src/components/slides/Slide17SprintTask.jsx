@@ -35,27 +35,27 @@ const Slide17SprintTask = ({ total }) => {
 
         {/* Right: Task List */}
         <div className="flex flex-col">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-2">Trabajo autónomo</p>
+          <p className="font-body text-base tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-2">Trabajo autónomo</p>
           
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-800 leading-[1.07] mb-8 fade-up fade-up-2">
             REFINAR E<br/>
             <span className="text-primary truncate uppercase">ITERAR.</span>
           </h2>
 
-          <div className="space-y-4 fade-up fade-up-3">
+          <div className="space-y-5 fade-up fade-up-3">
             {tasks.map((task, i) => (
-              <BentoCard key={i} className="flex items-center gap-5 p-5 hover:border-primary/30 transition-all group">
-                <div className="w-6 h-6 rounded-md border-2 border-primary/20 flex-shrink-0 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all" />
-                <p className="text-base font-medium text-foreground/80 leading-relaxed">
+              <BentoCard key={i} className="flex items-center gap-6 p-6 hover:border-primary/30 transition-all group">
+                <div className="w-8 h-8 rounded-md border-2 border-primary/20 flex-shrink-0 group-hover:border-primary/50 group-hover:bg-primary/5 transition-all" />
+                <p className="text-xl font-medium text-foreground/80 leading-relaxed">
                    {task}
                 </p>
               </BentoCard>
             ))}
           </div>
 
-          <div className="mt-10 p-4 bg-muted/40 rounded-xl border border-dashed border-border/60 text-center fade-up fade-up-4">
-             <p className="text-sm text-muted-foreground font-medium">
-                Sube tus resultados al <span className="text-foreground font-bold italic tracking-tight underline underline-offset-4 pointer-events-none">canal de la sesión</span> para recibir feedback.
+          <div className="mt-12 p-6 bg-muted/40 rounded-xl border border-dashed border-border/60 text-center fade-up fade-up-4">
+             <p className="text-lg text-muted-foreground font-medium leading-relaxed">
+                Sube tus resultados al <span className="text-foreground font-900 italic tracking-tight underline underline-offset-8 decoration-primary/30 pointer-events-none">canal de la sesión</span> para recibir feedback.
              </p>
           </div>
         </div>

@@ -16,10 +16,10 @@ const Slide10Transition = ({ total }) => {
           <span className="block text-3xl md:text-5xl lg:text-6xl text-primary italic">QUE SU PROPIA MADRE.</span>
         </h2>
         
-        <div className="mt-14 fade-up fade-up-3">
-          <p className="text-xl md:text-2xl font-medium text-muted-foreground">
+        <div className="mt-16 fade-up fade-up-3">
+          <p className="text-2xl md:text-3xl font-medium text-muted-foreground leading-relaxed">
              Ahora veamos contra quién <br/>
-             <span className="text-foreground font-bold underline decoration-primary/30 underline-offset-8">compite tu negocio.</span>
+             <span className="text-foreground font-900 underline decoration-primary/40 underline-offset-8">compite tu negocio.</span>
           </p>
         </div>
       </div>

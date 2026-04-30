@@ -1,13 +1,14 @@
 import SlideShell from './SlideShell';
 import SlideNumber from './SlideNumber';
 import BentoCard from './BentoCard';
+import { ClipboardList, Brain, Search, Gem } from 'lucide-react';
 
 const Slide21Recap = ({ total }) => {
   const items = [
-    { ico: '📋', lbl: 'Proyecto Definido', sub: 'Tu caso de estudio real para las 8 sesiones', color: 'border-t-primary' },
-    { ico: '🧠', lbl: 'Cliente Radiografiado', sub: 'Mapa de empatía + lenguaje exacto', color: 'border-t-accent' },
-    { ico: '🔎', lbl: 'Competencia Mapeada', sub: 'Patrones + huecos de mercado', color: 'border-t-amber-400' },
-    { ico: '💎', lbl: 'Propuesta Diferencial', sub: 'Elevator pitch · Tweet · Slogan', color: 'border-t-emerald-400' }
+    { ico: 'ClipboardList', lbl: 'Proyecto Definido', sub: 'Tu caso de estudio real para las 8 sesiones', color: 'border-t-primary' },
+    { ico: 'Brain', lbl: 'Cliente Radiografiado', sub: 'Mapa de empatía + lenguaje exacto', color: 'border-t-accent' },
+    { ico: 'Search', lbl: 'Competencia Mapeada', sub: 'Patrones + huecos de mercado', color: 'border-t-amber-400' },
+    { ico: 'Gem', lbl: 'Propuesta Diferencial', sub: 'Elevator pitch · Tweet · Slogan', color: 'border-t-emerald-400' }
   ];
 
   return (
@@ -21,13 +22,18 @@ const Slide21Recap = ({ total }) => {
         </h2>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-12 fade-up fade-up-3">
-          {items.map((item, i) => (
-            <BentoCard key={i} className={`flex flex-col items-center gap-4 py-10 px-6 border-t-4 ${item.color} shadow-lg shadow-black/5 hover:scale-[1.05] transition-transform`}>
-              <div className="text-4xl mb-2">{item.ico}</div>
-              <h3 className="font-heading text-sm font-900 uppercase tracking-widest text-foreground leading-tight">{item.lbl}</h3>
-              <p className="text-[12px] text-muted-foreground leading-relaxed font-medium">{item.sub}</p>
-            </BentoCard>
-          ))}
+          {items.map((item, i) => {
+            const Icon = { ClipboardList, Brain, Search, Gem }[item.ico];
+            return (
+              <BentoCard key={i} className={`flex flex-col items-center gap-6 py-12 px-6 border-t-4 ${item.color} shadow-lg shadow-black/5 hover:scale-[1.05] transition-transform`}>
+                <div className="w-16 h-16 rounded-2xl bg-muted/50 flex items-center justify-center text-primary mb-2">
+                   <Icon className="w-8 h-8" />
+                </div>
+                <h3 className="font-heading text-base font-900 uppercase tracking-widest text-foreground leading-tight">{item.lbl}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-medium">{item.sub}</p>
+              </BentoCard>
+            );
+          })}
         </div>
 
         <div className="fade-up fade-up-4 w-full max-w-4xl">

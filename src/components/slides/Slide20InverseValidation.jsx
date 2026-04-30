@@ -1,6 +1,7 @@
 import SlideShell from './SlideShell';
 import SlideNumber from './SlideNumber';
 import BentoCard from './BentoCard';
+import { ClipboardList, Brain, Search, Gem } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Slide20InverseValidation = ({ total }) => {
@@ -15,7 +16,7 @@ const Slide20InverseValidation = ({ total }) => {
     { role: 'user', text: 'Actúa como un cliente escéptico que ha visto cientos de ofertas parecidas.', type: 'user' },
     { role: 'ai', text: 'De acuerdo. Dame la propuesta que quieres que evalúe.', type: 'ai' },
     { role: 'user', text: '[Pega tu elevator pitch aquí]', type: 'user' },
-    { role: 'ai', text: '📌 Convence: la especificidad "corredor popular". <br><br>⚠️ Duda: ¿cómo sincronizo la dieta con mis series? <br><br>💡 Clave: mostrar un ejemplo de semana de carga.', type: 'highlight' }
+    { role: 'ai', text: 'Análisis: la especificidad "corredor popular" es un punto fuerte. <br><br>Fuga: ¿cómo sincronizo la dieta con mis series? <br><br>Clave: mostrar un ejemplo de semana de carga.', type: 'highlight' }
   ];
 
   return (
@@ -33,11 +34,11 @@ const Slide20InverseValidation = ({ total }) => {
              El prompt para detectar las "banderas rojas" de tu mensaje antes de lanzarlo al mercado.
           </p>
 
-          <div className="space-y-4 fade-up fade-up-4">
+          <div className="space-y-6 fade-up fade-up-4">
             {steps.map((step, i) => (
-              <div key={i} className="flex items-start gap-4 p-x-2">
-                 <span className="font-mono text-sm font-bold text-primary opacity-40">{step.n}</span>
-                 <p className="text-base font-bold text-foreground/80 leading-snug">{step.text}</p>
+              <div key={i} className="flex items-start gap-6 p-x-2">
+                 <span className="font-mono text-base font-bold text-primary opacity-40">{step.n}</span>
+                 <p className="text-xl font-bold text-foreground/80 leading-snug">{step.text}</p>
               </div>
             ))}
           </div>
@@ -52,7 +53,7 @@ const Slide20InverseValidation = ({ total }) => {
           {chat.map((msg, i) => (
             <div 
               key={i} 
-              className={`p-4 rounded-2xl text-[13px] leading-relaxed shadow-sm border
+              className={`p-6 rounded-2xl text-lg leading-relaxed shadow-sm border
               ${msg.type === 'user' ? 'bg-primary text-white border-primary/10 rounded-br-[4px] self-end max-w-[85%] font-medium' : ''}
               ${msg.type === 'ai' ? 'bg-white border-border/60 text-foreground/80 rounded-bl-[4px] self-start max-w-[85%]' : ''}
               ${msg.type === 'highlight' ? 'bg-accent/10 border-accent/30 text-accent-foreground rounded-bl-[4px] self-start max-w-[90%] font-bold' : ''}
@@ -60,8 +61,8 @@ const Slide20InverseValidation = ({ total }) => {
               dangerouslySetInnerHTML={{ __html: msg.text }}
             />
           ))}
-          <div className="text-center mt-4">
-             <span className="text-[10px] font-mono font-900 text-muted-foreground/30 uppercase tracking-widest">IA en modo Focus Group</span>
+          <div className="text-center mt-6">
+             <span className="text-xs font-mono font-900 text-muted-foreground/30 uppercase tracking-widest">IA en modo Focus Group</span>
           </div>
         </motion.div>
       </div>

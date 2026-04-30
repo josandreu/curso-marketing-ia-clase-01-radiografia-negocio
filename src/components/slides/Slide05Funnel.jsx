@@ -26,47 +26,47 @@ const Slide05Funnel = ({ total }) => {
           {funnelSteps.map((step, i) => (
             <div 
               key={i}
-              className={`flex items-center justify-center p-[11px_14px] rounded-[6px] border border-border/50 ${step.color} ${step.width} shadow-sm transition-transform hover:scale-[1.02] cursor-default`}
+              className={`flex items-center justify-center p-[16px_20px] rounded-[8px] border border-border/50 ${step.color} ${step.width} shadow-sm transition-transform hover:scale-[1.02] cursor-default`}
               style={{ clipPath: 'polygon(0 0, 100% 0, 96% 100%, 4% 100%)' }}
             >
               <div className="flex flex-col items-center text-center">
-                <div className={`text-[12px] font-900 tracking-[0.5px] uppercase ${step.text}`}>{step.name}</div>
-                <div className="text-[10px] font-medium text-muted-foreground mt-[1px]">{step.hint}</div>
+                <div className={`text-sm md:text-base font-900 tracking-[0.5px] uppercase ${step.text}`}>{step.name}</div>
+                <div className="text-xs font-medium text-muted-foreground mt-[1px]">{step.hint}</div>
               </div>
             </div>
           ))}
-          <div className="mt-6 text-xs font-mono font-bold text-muted-foreground uppercase tracking-widest bg-muted px-4 py-2 rounded-full border border-border/50">
+          <div className="mt-8 text-sm font-mono font-bold text-muted-foreground uppercase tracking-widest bg-muted px-6 py-3 rounded-full border border-border/50">
              Ventas & Retención
           </div>
         </motion.div>
 
         {/* Right: Content */}
         <div className="flex flex-col">
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-1">Contexto mínimo</p>
+          <p className="font-body text-base tracking-[0.2em] uppercase text-primary mb-3 fade-up fade-up-1">Contexto mínimo</p>
           
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-800 leading-[1.07] mb-[18px] fade-up fade-up-2">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-800 leading-[1.07] mb-[24px] fade-up fade-up-2">
             EL FUNNEL ES TU MAPA.<br/>
             <span className="text-muted-foreground/40 font-300 text-[0.7em]">No te pierdas.</span>
           </h2>
 
           <div className="space-y-6 fade-up fade-up-3">
-             <BentoCard accent className="border-l-4 border-l-primary/40">
-                <p className="text-base font-bold text-foreground mb-4"><strong>Misma energía. Mejores resultados.</strong></p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                   <div className="text-sm text-muted-foreground">
-                      <span className="text-destructive font-bold">❌ Ruido:</span><br/>
+             <BentoCard accent className="border-l-4 border-l-primary/40 p-8">
+                <p className="text-xl font-bold text-foreground mb-6"><strong>Misma energía. Mejores resultados.</strong></p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                   <div className="text-base text-muted-foreground leading-relaxed">
+                      <span className="text-destructive font-bold uppercase text-xs tracking-wider mb-2 block">❌ Ruido</span>
                       Publicar 5 veces al día sin estrategia ni funnel.
                    </div>
-                   <div className="text-sm text-foreground">
-                      <span className="text-primary font-bold">✅ Resultados:</span><br/>
+                   <div className="text-base text-foreground leading-relaxed">
+                      <span className="text-primary font-bold uppercase text-xs tracking-wider mb-2 block">✅ Resultados</span>
                       Funnel claro + 2 posts semanales estratégicos.
                    </div>
                 </div>
              </BentoCard>
 
-             <div className="bg-muted/30 p-6 rounded-2xl border border-border/50">
-                <p className="text-[15px] font-medium text-muted-foreground leading-relaxed">
-                  La diferencia no es la cantidad. Es saber <span className="text-primary font-bold italic tracking-tight">en qué fase del funnel</span> está cada contenido.
+             <div className="bg-muted/30 p-8 rounded-2xl border border-border/50">
+                <p className="text-lg md:text-xl font-medium text-muted-foreground leading-relaxed">
+                  La diferencia no es la cantidad. Es saber <span className="text-primary font-bold italic tracking-tight underline underline-offset-4 decoration-primary/20">en qué fase del funnel</span> está cada contenido.
                 </p>
              </div>
           </div>
