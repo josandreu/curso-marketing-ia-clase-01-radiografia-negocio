@@ -1,7 +1,7 @@
 import SlideShell from './SlideShell';
 import SlideNumber from './SlideNumber';
 import BentoCard from './BentoCard';
-import { Search, MessageSquare, Globe, CheckCircle2 } from 'lucide-react';
+import { MessageSquare, Globe } from 'lucide-react';
 
 const Slide11Perplexity = ({ total }) => {
   return (
@@ -46,38 +46,38 @@ const Slide11Perplexity = ({ total }) => {
           </div>
         </div>
 
-        <div className="fade-up fade-up-3">
-           <div className="bg-[#1C1C1E] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-              <div className="bg-[#2C2C2E] px-6 py-4 flex items-center justify-between border-b border-white/5">
-                 <div className="flex gap-2">
-                    <div className="w-3.5 h-3.5 rounded-full bg-[#FF5F56]" />
-                    <div className="w-3.5 h-3.5 rounded-full bg-[#FFBD2E]" />
-                    <div className="w-3.5 h-3.5 rounded-full bg-[#27C93F]" />
-                 </div>
-                 <span className="font-mono text-xs text-white/30 font-bold uppercase tracking-widest">Perplexity Terminal</span>
-              </div>
-              <div className="p-10 font-mono text-[16px] leading-relaxed space-y-4">
-                 <div className="flex gap-3">
-                    <span className="text-primary font-bold">$</span>
-                    <span className="text-white/80">benchmarking --competencia="nutrición deportiva"</span>
-                 </div>
-                 <div className="text-emerald-400 flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>✓ Buscando en tiempo real...</span>
-                 </div>
-                 <div className="text-white/60 pl-8 space-y-2">
-                    <p>• Analizando 12 URLs encontradas</p>
-                    <p>• Identificando patrones de precios</p>
-                    <p>• Detectando huecos en la oferta</p>
-                 </div>
-                 <div className="pt-6 flex flex-col gap-3">
-                    <div className="p-4 bg-white/5 rounded-xl border border-white/10">
-                       <p className="text-sm font-bold text-primary mb-2">Resultado:</p>
-                       <p className="text-white/90 text-sm leading-relaxed">Encontrados 3 competidores posicionados en elite. <span className="text-accent underline font-bold decoration-accent/30 underline-offset-4">Oportunidad:</span> Corredor popular no competitivo.</p>
-                    </div>
-                 </div>
-              </div>
-           </div>
+        <div className="fade-up fade-up-3 min-w-0">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-primary/80 mb-3 font-bold">
+            Prompt — Perplexity
+          </p>
+          <div className="bg-white border-2 border-primary/10 rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.06)]">
+            <div className="bg-primary/5 px-6 py-4 border-b border-primary/10 flex items-center gap-3">
+              <div className="w-3 h-3 rounded-full bg-destructive/40" />
+              <div className="w-3 h-3 rounded-full bg-amber-400/40" />
+              <div className="w-3 h-3 rounded-full bg-emerald-400/40" />
+              <span className="font-mono text-xs text-primary/60 font-bold uppercase tracking-[0.2em]">
+                Benchmarking con fuentes
+              </span>
+            </div>
+            <div className="p-6 md:p-8 max-h-[min(52vh,520px)] overflow-y-auto font-mono text-[15px] md:text-[16px] leading-relaxed text-foreground/80 scrollbar-thin scrollbar-thumb-primary/10">
+              <p>
+                Busca las 5 marcas o profesionales más relevantes en{' '}
+                <span className="text-primary font-bold">[sector/nicho]</span> en{' '}
+                <span className="text-primary font-bold">[país/mercado]</span>.
+              </p>
+              <p className="mt-4 font-bold text-foreground">Para cada uno:</p>
+              <ul className="mt-2 space-y-1 list-disc pl-5">
+                <li>Nombre y URL</li>
+                <li>Propuesta de valor principal (en 1 frase)</li>
+                <li>Canal de marketing más fuerte (web, Instagram, LinkedIn, YouTube, email…)</li>
+                <li>Qué hacen bien que yo podría aprender</li>
+                <li>Qué podrían mejorar (oportunidad para mí)</li>
+              </ul>
+              <p className="mt-4 text-primary/70 italic">
+                Formato: tabla comparativa con 5 filas.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <SlideNumber current={11} total={total || 24} />
